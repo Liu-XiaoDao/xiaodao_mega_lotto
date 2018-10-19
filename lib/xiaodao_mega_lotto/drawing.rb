@@ -2,12 +2,12 @@ module XiaodaoMegaLotto
   class Drawing
     attr_accessor :config
 
-    def initialize(config = Configuration.new)
-      @config = config
-    end
+    # def initialize(config = Configuration.new)
+    #   @config = config
+    # end
 
     def draw
-      config.drawing_count.times.map { single_draw }
+      XiaodaoMegaLotto.configuration.drawing_count.times.map { single_draw }
     end
     private
       def single_draw
