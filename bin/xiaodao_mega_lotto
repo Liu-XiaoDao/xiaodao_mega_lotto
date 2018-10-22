@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
 require_relative "../lib/xiaodao_mega_lotto/drawing"
+require_relative "../lib/xiaodao_mega_lotto/configuration"
 drawing = XiaodaoMegaLotto::Drawing.new.draw
 puts drawing

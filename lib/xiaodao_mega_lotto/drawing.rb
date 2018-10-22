@@ -7,7 +7,7 @@ module XiaodaoMegaLotto
     # end
 
     def draw
-      XiaodaoMegaLotto.configuration.drawing_count.times.map { single_draw }
+      Configuration.new.drawing_count.times.map { single_draw }
     end
     private
       def single_draw
