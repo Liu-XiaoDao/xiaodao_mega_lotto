@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["liupc-ubuntu"]
   spec.email         = ["liu_xiaodao@163.com"]
 
-  spec.summary       = "dao ge de di yi ge gem"
-  spec.description   = "dao ge shou xiu"
+  spec.summary       = "Practice work"
+  spec.description   = "Please do not use"
   spec.homepage      = "http://robot.liuxiaodap.top"
   spec.license       = "MIT"
 
