@@ -34,4 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "pry"
+  # for git-like commonad-line
+  spec.add_dependency "gli", "~> 2.12.2"
 end

@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+require 'gli'
+require 'xiaodao_mega_lotto'
+
+include GLI::App
+
+program_desc 'xiaodao_mega_lotto cli'
+version XiaodaoMegaLotto::VERSION
+
+desc '打印一组随机数'
+command :mega do |c|
+  c.desc '打印随机数'
+  c.command :lottos do |lottos|
+    lottos.desc '7个随机数'
+    lottos.flag [:lotto, 'of-board', 'of'], requred: true
+    lottos.action do |global, opt, args|
+      puts XiaodaoMegaLotto::Drawing.new.draw
+    end
+  end
+end
+
+
+on_error do |err|
+  if debugging?
+    $stderr.puts err.message
+    $stderr.puts err.backtrace.join( "\n" )
+  else
+    next if GLI::CustomExit === err
+    $stderr.puts err.message
+  end
+end
+
+def debugging?
+  defined? Bundler
+end
+
+exit run(ARGV)
